@@ -548,7 +548,7 @@ pyenchant==3.2.2
 pyexasol==0.27.0
 pygraphviz==1.14
 pyiceberg==0.7.1
-pykerberos==1.2.4
+#pykerberos==1.2.4
 pymongo==4.10.1
 pymssql==2.3.1
 pyodbc==5.2.0
@@ -587,7 +587,7 @@ redshift-connector==2.1.3
 referencing==0.35.1
 regex==2024.9.11
 requests-file==2.1.0
-requests-kerberos==0.15.0
+#requests-kerberos==0.15.0
 requests-mock==1.12.1
 requests-oauthlib==1.3.1
 requests-toolbelt==1.0.0
