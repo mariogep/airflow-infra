@@ -366,7 +366,6 @@ grpcio-health-checking==1.62.3
 grpcio-status==1.62.3
 grpcio-tools==1.62.3
 grpcio==1.67.1
-gssapi==1.9.0
 gunicorn==23.0.0
 h11==0.14.0
 h2==4.1.0
