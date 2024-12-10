@@ -492,12 +492,12 @@ opensearch-py==2.7.1
 opsgenie-sdk==2.1.5
 oracledb==2.4.1
 ordered-set==4.1.0
-oss2==2.19.1
+# oss2==2.19.1
 packaging==24.1
 pandas-gbq==0.24.0
 pandas-stubs==2.2.3.241009
 pandas==2.1.4
-paramiko==3.5.0
+# paramiko==3.5.0
 parso==0.8.4
 pathable==0.4.3
 pathspec==0.12.1
