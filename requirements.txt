@@ -258,7 +258,7 @@ cloudpickle==3.1.0
 cohere==4.57
 colorama==0.4.6
 colorlog==6.9.0
-confluent-kafka==2.6.0
+#confluent-kafka==2.6.0
 connexion==2.14.2
 coverage==7.6.4
 crcmod==1.7
@@ -358,7 +358,7 @@ google-re2==1.1.20240702
 google-resumable-media==2.7.2
 googleapis-common-protos==1.65.0
 graphql-core==3.2.5
-graphviz==0.20.3
+#graphviz==0.20.3
 greenlet==3.1.1
 #grpc-google-iam-v1==0.13.1
 #grpc-interceptor==0.15.4
@@ -408,7 +408,7 @@ jedi==0.19.1
 jeepney==0.8.0
 jiter==0.7.0
 jmespath==0.10.0
-joserfc==1.0.0
+#joserfc==1.0.0
 json-merge-patch==0.2
 jsondiff==2.2.1
 jsonpatch==1.33
@@ -419,7 +419,7 @@ jsonschema-path==0.3.3
 jsonschema-specifications==2023.12.1
 jsonschema==4.23.0
 keyring==25.5.0
-kombu==5.4.2
+# kombu==5.4.2
 # krb5==0.7.0
 # kubernetes==30.1.0
 # kubernetes_asyncio==30.1.0
@@ -466,7 +466,7 @@ mypy-extensions==1.0.0
 mypy==1.9.0
 mysql-connector-python==9.1.0
 mysqlclient==2.2.5
-neo4j==5.26.0
+#neo4j==5.26.0
 networkx==3.4.2
 nh3==0.2.18
 nodeenv==1.9.1
@@ -480,15 +480,15 @@ openlineage-python==1.23.0
 openlineage_sql==1.23.0
 openpyxl==3.1.5
 opensearch-py==2.7.1
-opentelemetry-api==1.27.0
-opentelemetry-exporter-otlp-proto-common==1.27.0
-opentelemetry-exporter-otlp-proto-grpc==1.27.0
-opentelemetry-exporter-otlp-proto-http==1.27.0
-opentelemetry-exporter-otlp==1.27.0
-opentelemetry-exporter-prometheus==0.48b0
-opentelemetry-proto==1.27.0
-opentelemetry-sdk==1.27.0
-opentelemetry-semantic-conventions==0.48b0
+#opentelemetry-api==1.27.0
+#opentelemetry-exporter-otlp-proto-common==1.27.0
+#opentelemetry-exporter-otlp-proto-grpc==1.27.0
+#opentelemetry-exporter-otlp-proto-http==1.27.0
+#opentelemetry-exporter-otlp==1.27.0
+#opentelemetry-exporter-prometheus==0.48b0
+#opentelemetry-proto==1.27.0
+#opentelemetry-sdk==1.27.0
+#opentelemetry-semantic-conventions==0.48b0
 opsgenie-sdk==2.1.5
 oracledb==2.4.1
 ordered-set==4.1.0
@@ -522,7 +522,7 @@ pprintpp==0.4.0
 pre_commit==4.0.1
 presto-python-client==0.8.4
 prison==0.2.1
-prometheus_client==0.21.0
+#prometheus_client==0.21.0
 prompt_toolkit==3.0.48
 propcache==0.2.0
 proto-plus==1.25.0
