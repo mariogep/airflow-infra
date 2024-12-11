@@ -65,6 +65,7 @@ x-airflow-common:
     _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     AIRFLOW__CORE__ENABLE_XCOM_PICKLING: 'true'
     AIRFLOW__CORE__DAGS_FOLDER: '/usr/local/airflow/dags'
+    # AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 60
 
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/usr/local/airflow/dags
@@ -135,6 +136,12 @@ services:
       timeout: 10s
       retries: 5
       start_period: 30s
+    livenessProbe:
+      initialDelaySeconds: 120
+      timeoutSeconds: 180
+      failureThreshold: 5
+      periodSeconds: 600
+      command: ~
     restart: always
     depends_on:
       <<: *airflow-common-depends-on
