@@ -130,10 +130,6 @@ services:
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
-    resources:
-      limits:
-        cpu: 1000m
-        memory: 2000Mi
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 60s
@@ -145,6 +141,7 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    cpu_shares: 1000
 
   airflow-worker:
     <<: *airflow-common
