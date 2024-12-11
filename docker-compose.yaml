@@ -141,7 +141,7 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
-    cpu_shares: 1000
+    cpu_shares: 512
 
   airflow-worker:
     <<: *airflow-common
