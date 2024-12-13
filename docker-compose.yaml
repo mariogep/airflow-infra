@@ -69,6 +69,7 @@ x-airflow-common:
 
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/usr/local/airflow/dags
+    - ${AIRFLOW_PROJ_DIR:-.}/dags_refactored:/usr/local/airflow/dags_refactored
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
