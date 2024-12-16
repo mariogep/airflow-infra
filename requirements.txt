@@ -793,3 +793,4 @@ cfscrape
 polars
 minio
 deathbycaptcha
+astor==0.8.1
