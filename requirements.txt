@@ -97,7 +97,6 @@
 # anyio==4.6.2.post1
 # apache-airflow-providers-airbyte==4.0.0
 # #apache-airflow-providers-alibaba==2.9.1
-# apache-airflow-providers-amazon==9.0.0
 # #apache-airflow-providers-apache-cassandra==3.6.0
 # apache-airflow-providers-apache-drill==2.8.0
 # apache-airflow-providers-apache-druid==3.12.0
@@ -756,6 +755,7 @@ dlt==1.4.1
 dbt-core==1.9.0
 opentelemetry-proto==1.28.2
 apache-airflow-providers-celery==3.8.3
+apache-airflow-providers-amazon==9.0.0
 celery==5.4.0
 apache-airflow[celery]==2.10.3
 tenacity==8.5.0
