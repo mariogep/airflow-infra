@@ -70,6 +70,7 @@ x-airflow-common:
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/usr/local/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/dags_refactored:/usr/local/airflow/dags_refactored
+    - ${AIRFLOW_PROJ_DIR:-.}/git_sync:/usr/local/airflow/git_sync
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
     - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
@@ -281,17 +282,16 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
-  # git-sync:
-  #   image: databurst/git-sync:latest
-  #   volumes:
-  #     - ${AIRFLOW_PROJ_DIR:-.}/dags:/usr/local/airflow/dags
-  #     - ${GIT_SSH_KEY:-~/.ssh/id_ed25519}:/root/.ssh/id_ed25519
-  #   environment:
-  #     REPO_URL: ${REPO_URL:-git@github.com:GEP-Costdrivers/MWAA.git}
-  #     GIT_BRANCH: ${GIT_BRANCH:-dev}
-  #     DIRECTORY_NAME: ${DIRECTORY_NAME:-project}
-  #     DESTINATION_PATH: ${DESTINATION_PATH:-/app/sync}
-  #     INTERVAL: ${INTERVAL:-10}
+  git-sync:
+    image: databurst/git-sync:latest
+    volumes:
+      - ${AIRFLOW_PROJ_DIR:-.}/git_sync:/usr/local/airflow/git_sync
+      - ${GIT_SSH_KEY:-~/.ssh/id_rsa}:/root/.ssh/id_rsa
+    environment:
+      REPO_URL: ${REPO_URL:-git@github.com:GEP-Costdrivers/MWAA.git}
+      GIT_BRANCH: ${GIT_BRANCH:-dev}
+      DESTINATION_PATH: ${DESTINATION_PATH:-/usr/local/airflow/git_sync}
+      INTERVAL: ${INTERVAL:-60}
 
 volumes:
   postgres-db-volume:
