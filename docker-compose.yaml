@@ -286,8 +286,8 @@ services:
     image: databurst/git-sync:latest
     volumes:
       - ./project_data:${DESTINATION_PATH:-/app/sync}
-      - /home/ec2-user/.ssh/:/root/.ssh/
-      - ${GIT_SSH_KEY:-~/.ssh/}:/root/.ssh/
+      # - /home/ec2-user/.ssh/:/root/.ssh/
+      - ${GIT_SSH_KEY:-/home/ec2-user/.ssh/}:/root/.ssh/
     environment:
       REPO_URL: ${REPO_URL:-git@github.com:mariogep/IaC-airflow2103.git}
       GIT_BRANCH: ${GIT_BRANCH:-main}
