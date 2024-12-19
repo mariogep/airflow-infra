@@ -285,7 +285,7 @@ services:
   git-sync:
     image: databurst/git-sync:latest
     volumes:
-      - ./project_data:${DESTINATION_PATH:-/app/sync}
+      - ./project_data:${DESTINATION_PATH:-/project}
       - /home/ec2-user/.ssh/:/root/.ssh/
       # - ${GIT_SSH_KEY:-/home/ec2-user/.ssh/}:/root/.ssh/
     environment:
